@@ -8,11 +8,15 @@ public class AnimationState : MonoBehaviour
     Animator animator;
     int isWalkingHash;
     int isRunningHash;
+    int isJumpingHash;
+    int isSidedHash;
     void Start()
     {
         animator = GetComponent<Animator>();
         isWalkingHash = Animator.StringToHash("isWalking");
         isRunningHash = Animator.StringToHash("isRunning");
+        isJumpingHash = Animator.StringToHash("isJumping");
+        isSidedHash = Animator.StringToHash("isSided");
     }
 
     // Update is called once per frame
@@ -20,8 +24,12 @@ public class AnimationState : MonoBehaviour
     {
         bool isRunning = animator.GetBool(isRunningHash);
         bool isWalking = animator.GetBool(isWalkingHash);
+        bool isJumping = animator.GetBool(isJumpingHash);
+        bool isSided = animator.GetBool(isSidedHash);
         bool forwardPressed = Input.GetKey("w");
         bool runPressed = Input.GetKey("left shift");
+        bool jumpPressed = Input.GetKey("space");
+        bool sidePressed = Input.GetKey("a");
         if (!isWalking && forwardPressed)
         {
             animator.SetBool(isWalkingHash, true);
@@ -37,6 +45,22 @@ public class AnimationState : MonoBehaviour
         if (isRunning && (!forwardPressed || !runPressed))
         {
             animator.SetBool(isRunningHash, false);
+        }
+        if(!isJumping && jumpPressed)
+        {
+            animator.SetBool(isJumpingHash, true);
+        }
+        if(isJumping && !jumpPressed)
+        {
+            animator.SetBool(isJumpingHash, false);
+        }
+        if(!isSided && sidePressed)
+        {
+            animator.SetBool(isSidedHash, true);
+        }
+        if(isSided && !sidePressed)
+        {
+            animator.SetBool(isSidedHash, false);
         }
     }
 }
