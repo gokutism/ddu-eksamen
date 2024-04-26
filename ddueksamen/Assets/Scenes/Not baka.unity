@@ -2239,6 +2239,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DanHengV6
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2bb22c1d417d74e46bbfb64d27eba5ac, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 2bb22c1d417d74e46bbfb64d27eba5ac, type: 3}
       propertyPath: m_Controller
       value: 
@@ -7874,7 +7878,7 @@ GameObject:
   - component: {fileID: 1682891255}
   - component: {fileID: 1682891254}
   - component: {fileID: 1682891253}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ooooof
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8990,6 +8994,10 @@ PrefabInstance:
     - target: {fileID: 646133557016172292, guid: 8a800d00846e217428a0e7387df0df45, type: 3}
       propertyPath: m_Name
       value: Franz_ferdinand
+      objectReference: {fileID: 0}
+    - target: {fileID: 646133557016172292, guid: 8a800d00846e217428a0e7387df0df45, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6091452473014433220, guid: 8a800d00846e217428a0e7387df0df45, type: 3}
       propertyPath: m_LocalPosition.x
