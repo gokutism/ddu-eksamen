@@ -17,6 +17,6 @@ public class Gun : MonoBehaviour
     void Shoot()
     {
         RaycastHit hit;
-        Physics.Raycast(fpsCam.)
+        //iPhysics.Raycast(fpsCam.transform.position);
     }
 }
