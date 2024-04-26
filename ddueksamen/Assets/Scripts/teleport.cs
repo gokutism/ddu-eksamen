@@ -5,7 +5,6 @@ using UnityEngine;
 public class teleport : MonoBehaviour
 {
     private Collision _collider;
-    public bool work;
     public GameObject player;
     // Start is called before the first frame update
     void Start()
