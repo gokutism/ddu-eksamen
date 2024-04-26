@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class teleport : MonoBehaviour
 {
+    private Collision _collider;
+    public bool work;
     public GameObject player;
     // Start is called before the first frame update
     void Start()
     {
-        player = GetComponent<GameObject>();
+       
     }
 
     // Update is called once per frame
@@ -16,8 +18,14 @@ public class teleport : MonoBehaviour
     {
         
     }
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-       player.transform.position = Vector3.zero;
+        if (other.tag == ("Player"))
+        {
+            CharacterController cc = other.GetComponent<CharacterController>();
+            cc.enabled = false;
+            other.transform.position = new Vector3(1,1,1);
+            cc.enabled = true;
+        }
     }
 }
