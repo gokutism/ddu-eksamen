@@ -13,6 +13,9 @@ public class ThirdPersonShooterController1 : MonoBehaviour
     [SerializeField] private Transform debugTransform;
     [SerializeField] private Transform bulletProjectileMan;
     [SerializeField] private Transform spawnBulletPos;
+    [SerializeField] public float offSet;
+    [SerializeField] private Transform ptkcolor1;
+    [SerializeField] private Transform ptkcolor2;
 
     private ThirdPersonController thirdPersonController;
     private StarterAssetsInputs starterAssetsInputs;
@@ -26,10 +29,12 @@ public class ThirdPersonShooterController1 : MonoBehaviour
         Vector3 mouseWorldPosition = Vector3.zero;
         Vector2 screenCenterPoint = new Vector2(Screen.width / 2f, Screen.height / 2f);
         Ray ray = Camera.main.ScreenPointToRay(screenCenterPoint);
+        Transform hitTransform = null;
         if (Physics.Raycast(ray, out RaycastHit raycastHit, 999f, aimColliderLayerMask))
         {
             debugTransform.position = raycastHit.point;
             mouseWorldPosition = raycastHit.point;
+            hitTransform = raycastHit.transform;
         }
         if (starterAssetsInputs.aim)
         {
@@ -50,6 +55,17 @@ public class ThirdPersonShooterController1 : MonoBehaviour
         }
         if (starterAssetsInputs.shoot)
         {
+            if(hitTransform != null)
+            {
+                if (hitTransform.GetComponent<BulletTarget>() != null)
+                {
+                    Instantiate(ptkcolor1, transform.position, Quaternion.identity);
+                }
+                else
+                {
+                    Instantiate(ptkcolor2, transform.position, Quaternion.identity);
+                }
+            }
             Vector3 aimDir = (mouseWorldPosition - spawnBulletPos.position).normalized;
             Instantiate(bulletProjectileMan, spawnBulletPos.position, Quaternion.LookRotation(aimDir, Vector3.up));
             starterAssetsInputs.shoot = false;
