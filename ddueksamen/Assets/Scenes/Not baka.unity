@@ -943,6 +943,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -9162484748627739507, guid: 2bb22c1d417d74e46bbfb64d27eba5ac, type: 3}
   m_PrefabInstance: {fileID: 452678625}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &199455873
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 199455874}
+  m_Layer: 0
+  m_Name: koko
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &199455874
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 199455873}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1.1000023}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1271669863}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &199611255
 GameObject:
   m_ObjectHideFlags: 0
@@ -7337,6 +7368,7 @@ GameObject:
   - component: {fileID: 1271669860}
   - component: {fileID: 1271669859}
   - component: {fileID: 1271669864}
+  - component: {fileID: 1271669865}
   m_Layer: 0
   m_Name: Bennu
   m_TagString: Untagged
@@ -7351,7 +7383,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1271669858}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6899be71ef607f347beb70032bb4a948, type: 3}
   m_Name: 
@@ -7451,7 +7483,8 @@ Transform:
   m_LocalPosition: {x: 13.625209, y: 1.7, z: 41.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 199455874}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!195 &1271669864
@@ -7476,6 +7509,34 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &1271669865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1271669858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88c52b46e09adb2458d9b753183bc8bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  waypoints:
+  - {fileID: 2049694554}
+  - {fileID: 681358056}
+  - {fileID: 1295620502}
+  - {fileID: 308573769}
+  stoppingDistance: 2
+  viewDist: 20
+  currentState: 0
+  bullet: {fileID: 1147472952677354949, guid: c3b6410efff668e4390da117a1e971eb, type: 3}
+  rps: 0.5
+  bulletspeed: 10
+  bulletspawnpos: {fileID: 199455874}
+  attackrange: 10
+  maxHP: 100
+  currentHp: 0
 --- !u!4 &1273662363 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1671227681221965418, guid: 2bb22c1d417d74e46bbfb64d27eba5ac, type: 3}
