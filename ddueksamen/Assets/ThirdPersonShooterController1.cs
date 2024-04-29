@@ -11,6 +11,8 @@ public class ThirdPersonShooterController1 : MonoBehaviour
     [SerializeField] private float aimSensitivity;
     [SerializeField] private LayerMask aimColliderLayerMask = new LayerMask();
     [SerializeField] private Transform debugTransform;
+    [SerializeField] private Transform bulletProjectileMan;
+    [SerializeField] private Transform spawnBulletPos;
 
     private ThirdPersonController thirdPersonController;
     private StarterAssetsInputs starterAssetsInputs;
@@ -33,7 +35,7 @@ public class ThirdPersonShooterController1 : MonoBehaviour
         {
             aimVirtualCamera.gameObject.SetActive(true);
             thirdPersonController.SetSensitivity(aimSensitivity);
-
+            thirdPersonController.SetRotateOnMove(false);
             Vector3 worldAimTarget = mouseWorldPosition;
             worldAimTarget.y = transform.position.y;
             Vector3 aimDirection = (worldAimTarget - transform.position).normalized;
@@ -44,6 +46,13 @@ public class ThirdPersonShooterController1 : MonoBehaviour
         {
             aimVirtualCamera.gameObject.SetActive(false);
             thirdPersonController.SetSensitivity(normalSensitivity);
+            thirdPersonController.SetRotateOnMove(true);
+        }
+        if (starterAssetsInputs.shoot)
+        {
+            Vector3 aimDir = (mouseWorldPosition - spawnBulletPos.position).normalized;
+            Instantiate(bulletProjectileMan, spawnBulletPos.position, Quaternion.LookRotation(aimDir, Vector3.up));
+            starterAssetsInputs.shoot = false;
         }
        
     }

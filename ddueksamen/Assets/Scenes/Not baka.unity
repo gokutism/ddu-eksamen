@@ -3653,6 +3653,7 @@ MonoBehaviour:
   jump: 1
   sprint: 1
   aim: 0
+  shoot: 0
   analogMovement: 1
   cursorLocked: 1
   cursorInputForLook: 1
@@ -6956,6 +6957,13 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 65
   debugTransform: {fileID: 1551536138}
+  bulletProjectileMan: {fileID: 2806273006352039649, guid: 691b409f3cbf7754abc43dce924dcdcd, type: 3}
+  spawnBulletPos: {fileID: 1399393143}
+--- !u!4 &1204915261 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6091452473014433220, guid: 8a800d00846e217428a0e7387df0df45, type: 3}
+  m_PrefabInstance: {fileID: 1661683448}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1211470974 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -7073183157450531265, guid: 2bb22c1d417d74e46bbfb64d27eba5ac, type: 3}
@@ -7752,6 +7760,37 @@ Transform:
   m_Children:
   - {fileID: 519015898}
   m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1399393142
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1399393143}
+  m_Layer: 8
+  m_Name: PosOfShot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1399393143
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399393142}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.052036285, y: 1.4000012, z: 0.40945435}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1204915261}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1404462110 stripped
 Transform:
@@ -8556,7 +8595,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 6091452473014433220, guid: 8a800d00846e217428a0e7387df0df45, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1399393143}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 646133557016172292, guid: 8a800d00846e217428a0e7387df0df45, type: 3}
       insertIndex: -1
