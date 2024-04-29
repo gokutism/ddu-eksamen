@@ -609,3 +609,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17932b8734a63144b875d60dddb57de7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 10
+  ptkcolor1: {fileID: 3100332192673815182, guid: 896ee3f446f54ed4dab5ca8f9147ee50, type: 3}
+  ptkcolor2: {fileID: 3685836756685519197, guid: 58cc747b053010c4597a8b693b851bbf, type: 3}
