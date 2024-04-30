@@ -16,6 +16,7 @@ public class ThirdPersonShooterController1 : MonoBehaviour
     [SerializeField] public float offSet;
     [SerializeField] private Transform ptkcolor1;
     [SerializeField] private Transform ptkcolor2;
+    [SerializeField] public int damage;
     RaycastHit raycastHit;
     private ThirdPersonController thirdPersonController;
     private StarterAssetsInputs starterAssetsInputs;
@@ -55,23 +56,35 @@ public class ThirdPersonShooterController1 : MonoBehaviour
         }
         if (starterAssetsInputs.shoot)
         {
-            if(hitTransform != null)
+            if (hitTransform != null)
             {
                 if (hitTransform.GetComponent<BulletTarget>() != null)
                 {
                     Instantiate(ptkcolor1, raycastHit.point, Quaternion.identity);
-                    
+
                 }
                 else
                 {
                     Instantiate(ptkcolor2, raycastHit.point, Quaternion.identity);
-                    
+
                 }
             }
-           /* Vector3 aimDir = (mouseWorldPosition - spawnBulletPos.position).normalized;
-            Instantiate(bulletProjectileMan, spawnBulletPos.position, Quaternion.LookRotation(aimDir, Vector3.up));*/
+            /* Vector3 aimDir = (mouseWorldPosition - spawnBulletPos.position).normalized;
+             Instantiate(bulletProjectileMan, spawnBulletPos.position, Quaternion.LookRotation(aimDir, Vector3.up));*/
             starterAssetsInputs.shoot = false;
         }
-       
+
+
+    }
+    private void OnTriggerEnter(Collider collision)
+    {
+        if (collision.tag == "Enemy")
+        {
+            var healthComponent = collision.GetComponent<moveeeee>();
+            if (healthComponent != null)
+            {
+                healthComponent.TakeDamage(1);
+            }
+        }
     }
 }

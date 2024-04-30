@@ -35,7 +35,7 @@ public class moveeeee : MonoBehaviour, IDamageable
     public float attackrange = 10f;
 
     [Header("HP Settings")]
-    public float maxHP = 100;
+    public float maxHP;
     public float currentHp;
 
 
