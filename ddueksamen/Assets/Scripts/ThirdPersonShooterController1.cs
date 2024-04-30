@@ -20,6 +20,8 @@ public class ThirdPersonShooterController1 : MonoBehaviour
     RaycastHit raycastHit;
     private ThirdPersonController thirdPersonController;
     private StarterAssetsInputs starterAssetsInputs;
+    public AttributesManager playerAtm;
+    public AttributesManager enemyAtm;
     private void Awake()
     {
         thirdPersonController = GetComponent<ThirdPersonController>();
@@ -61,7 +63,12 @@ public class ThirdPersonShooterController1 : MonoBehaviour
                 if (hitTransform.GetComponent<BulletTarget>() != null)
                 {
                     Instantiate(ptkcolor1, raycastHit.point, Quaternion.identity);
+                    if (CompareTag)
+                    {
+                        playerAtm.DealDamage(enemyAtm.gameObject);
 
+                    }
+                    
                 }
                 else
                 {
@@ -69,22 +76,13 @@ public class ThirdPersonShooterController1 : MonoBehaviour
 
                 }
             }
-            /* Vector3 aimDir = (mouseWorldPosition - spawnBulletPos.position).normalized;
-             Instantiate(bulletProjectileMan, spawnBulletPos.position, Quaternion.LookRotation(aimDir, Vector3.up));*/
+             Vector3 aimDir = (mouseWorldPosition - spawnBulletPos.position).normalized;
+             Instantiate(bulletProjectileMan, spawnBulletPos.position, Quaternion.LookRotation(aimDir, Vector3.up));
+            
             starterAssetsInputs.shoot = false;
         }
 
 
     }
-    private void OnTriggerEnter(Collider collision)
-    {
-        if (collision.tag == "Enemy")
-        {
-            var healthComponent = collision.GetComponent<moveeeee>();
-            if (healthComponent != null)
-            {
-                healthComponent.TakeDamage(1);
-            }
-        }
-    }
+   
 }
