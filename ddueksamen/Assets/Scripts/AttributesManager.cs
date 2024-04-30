@@ -19,7 +19,7 @@ public class AttributesManager : MonoBehaviour
             atm.TakeDamage(attack);
             if(health <= 0)
             {
-                Destroy(gameObject);
+                Destroy(target);
             }
         }
     }
