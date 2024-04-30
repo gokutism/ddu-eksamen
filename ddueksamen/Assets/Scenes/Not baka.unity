@@ -7111,11 +7111,28 @@ MonoBehaviour:
   offSet: 0
   ptkcolor1: {fileID: 3100332192673815182, guid: 896ee3f446f54ed4dab5ca8f9147ee50, type: 3}
   ptkcolor2: {fileID: 3685836756685519197, guid: 58cc747b053010c4597a8b693b851bbf, type: 3}
+  damage: 1
+  playerAtm: {fileID: 1204915269}
+  enemyAtm: {fileID: 0}
 --- !u!4 &1204915261 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6091452473014433220, guid: 8a800d00846e217428a0e7387df0df45, type: 3}
   m_PrefabInstance: {fileID: 1661683448}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1204915269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1204915251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22c14cc2fc3865f48a36f5670a66c3e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  attack: 10
 --- !u!4 &1211470974 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -7073183157450531265, guid: 2bb22c1d417d74e46bbfb64d27eba5ac, type: 3}
@@ -7369,9 +7386,11 @@ GameObject:
   - component: {fileID: 1271669859}
   - component: {fileID: 1271669864}
   - component: {fileID: 1271669865}
+  - component: {fileID: 1271669866}
+  - component: {fileID: 1271669867}
   m_Layer: 0
   m_Name: Bennu
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7535,8 +7554,34 @@ MonoBehaviour:
   bulletspeed: 10
   bulletspawnpos: {fileID: 199455874}
   attackrange: 10
-  maxHP: 100
+  maxHP: 1
   currentHp: 0
+--- !u!114 &1271669866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1271669858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22c14cc2fc3865f48a36f5670a66c3e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 10
+  attack: 10
+--- !u!114 &1271669867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1271669858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc451e2e95adb9b4ca59b785e90df041, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1273662363 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1671227681221965418, guid: 2bb22c1d417d74e46bbfb64d27eba5ac, type: 3}
@@ -8789,6 +8834,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 646133557016172292, guid: 8a800d00846e217428a0e7387df0df45, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1204915260}
+    - targetCorrespondingSourceObject: {fileID: 646133557016172292, guid: 8a800d00846e217428a0e7387df0df45, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1204915269}
   m_SourcePrefab: {fileID: 100100000, guid: 8a800d00846e217428a0e7387df0df45, type: 3}
 --- !u!4 &1668366669 stripped
 Transform:
