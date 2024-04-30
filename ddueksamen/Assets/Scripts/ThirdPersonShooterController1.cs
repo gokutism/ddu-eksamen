@@ -63,12 +63,9 @@ public class ThirdPersonShooterController1 : MonoBehaviour
                 if (hitTransform.GetComponent<BulletTarget>() != null)
                 {
                     Instantiate(ptkcolor1, raycastHit.point, Quaternion.identity);
-                    if (CompareTag)
-                    {
-                        playerAtm.DealDamage(enemyAtm.gameObject);
+                   
+                    playerAtm.DealDamage(enemyAtm.gameObject);
 
-                    }
-                    
                 }
                 else
                 {
