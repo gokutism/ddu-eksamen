@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1884,6 +1884,7 @@ GameObject:
   - component: {fileID: 306943770}
   - component: {fileID: 306943769}
   - component: {fileID: 306943768}
+  - component: {fileID: 306943773}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -1989,6 +1990,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &306943773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 306943767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22c14cc2fc3865f48a36f5670a66c3e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 10
+  attack: 1
 --- !u!1 &308573768
 GameObject:
   m_ObjectHideFlags: 0
@@ -7113,7 +7128,7 @@ MonoBehaviour:
   ptkcolor2: {fileID: 3685836756685519197, guid: 58cc747b053010c4597a8b693b851bbf, type: 3}
   damage: 1
   playerAtm: {fileID: 1204915269}
-  enemyAtm: {fileID: 0}
+  enemyAtm: {fileID: 306943773}
 --- !u!4 &1204915261 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6091452473014433220, guid: 8a800d00846e217428a0e7387df0df45, type: 3}
@@ -7568,7 +7583,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22c14cc2fc3865f48a36f5670a66c3e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  health: 11
   attack: 10
 --- !u!114 &1271669867
 MonoBehaviour:

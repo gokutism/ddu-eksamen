@@ -17,9 +17,10 @@ public class AttributesManager : MonoBehaviour
         if(atm != null )
         {
             atm.TakeDamage(attack);
-            if(health <= 0)
+            if(atm.health <= 0)
             {
                 Destroy(target);
+                Debug.Log("ded");
             }
         }
     }

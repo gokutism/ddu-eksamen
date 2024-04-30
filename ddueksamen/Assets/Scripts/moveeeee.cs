@@ -163,6 +163,7 @@ public class moveeeee : MonoBehaviour, IDamageable
         if (currentHp < 0)
         {
             Debug.Log("ha loser");
+            Destroy(gameObject);
         }
         Debug.Log("hit");
     }

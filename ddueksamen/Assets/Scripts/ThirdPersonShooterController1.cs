@@ -4,6 +4,9 @@ using UnityEngine;
 using Cinemachine;
 using StarterAssets;
 using UnityEngine.InputSystem;
+using Unity.VisualScripting;
+using UnityEngine.Rendering;
+
 public class ThirdPersonShooterController1 : MonoBehaviour
 {
     [SerializeField] private CinemachineVirtualCamera aimVirtualCamera;
@@ -33,6 +36,7 @@ public class ThirdPersonShooterController1 : MonoBehaviour
         Vector2 screenCenterPoint = new Vector2(Screen.width / 2f, Screen.height / 2f);
         Ray ray = Camera.main.ScreenPointToRay(screenCenterPoint);
         Transform hitTransform = null;
+
         if (Physics.Raycast(ray, out raycastHit, 999f, aimColliderLayerMask))
         {
             debugTransform.position = raycastHit.point;
@@ -58,14 +62,26 @@ public class ThirdPersonShooterController1 : MonoBehaviour
         }
         if (starterAssetsInputs.shoot)
         {
-            if (hitTransform != null)
+
+            RaycastHit hit;
+
+            if (Physics.Raycast(ray, out hit))
             {
+                if (hit.collider != null)
+                {
+                    hit.collider.GetComponent<IDamageable>()?.TakeDamage(damage);
+                }
+            }
+
+                if (hitTransform != null)
+            {
+
                 if (hitTransform.GetComponent<BulletTarget>() != null)
                 {
                     Instantiate(ptkcolor1, raycastHit.point, Quaternion.identity);
                    
                     playerAtm.DealDamage(enemyAtm.gameObject);
-
+                    
                 }
                 else
                 {
@@ -78,6 +94,7 @@ public class ThirdPersonShooterController1 : MonoBehaviour
             
             starterAssetsInputs.shoot = false;
         }
+        
 
 
     }
