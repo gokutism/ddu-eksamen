@@ -89,8 +89,8 @@ public class ThirdPersonShooterController1 : MonoBehaviour
 
                 }
             }
-             Vector3 aimDir = (mouseWorldPosition - spawnBulletPos.position).normalized;
-             Instantiate(bulletProjectileMan, spawnBulletPos.position, Quaternion.LookRotation(aimDir, Vector3.up));
+            /* Vector3 aimDir = (mouseWorldPosition - spawnBulletPos.position).normalized;
+             Instantiate(bulletProjectileMan, spawnBulletPos.position, Quaternion.LookRotation(aimDir, Vector3.up));*/
             
             starterAssetsInputs.shoot = false;
         }

@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 2661804735178630974}
   - component: {fileID: 8900382838521687861}
   - component: {fileID: -1663262056624414737}
+  - component: {fileID: -8129741995213615544}
+  - component: {fileID: -9054213100495203746}
   m_Layer: 0
   m_Name: Stair
   m_TagString: Untagged
@@ -1193,3 +1195,31 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 2
+--- !u!114 &-8129741995213615544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1147472952677354949}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17932b8734a63144b875d60dddb57de7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 30
+  ptkcolor1: {fileID: 3100332192673815182, guid: 896ee3f446f54ed4dab5ca8f9147ee50, type: 3}
+  ptkcolor2: {fileID: 3685836756685519197, guid: 58cc747b053010c4597a8b693b851bbf, type: 3}
+--- !u!114 &-9054213100495203746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1147472952677354949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0c5ff9243d28f249abe2a6eabae36be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 100
