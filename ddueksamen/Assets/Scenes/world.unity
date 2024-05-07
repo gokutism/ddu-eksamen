@@ -22133,6 +22133,10 @@ PrefabInstance:
       propertyPath: MoveSpeed
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 1063287832863377327, guid: 8a800d00846e217428a0e7387df0df45, type: 3}
+      propertyPath: SprintSpeed
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 1466544087963311388, guid: 8a800d00846e217428a0e7387df0df45, type: 3}
       propertyPath: drawBones
       value: 0
