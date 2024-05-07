@@ -13,7 +13,7 @@ public class moveeeee : MonoBehaviour, IDamageable
     [SerializeField] float stoppingDistance = 2f;
     public float viewDist = 20f;
     private Vector3 lastKnownPos = Vector3.zero;
-
+    Animator animator;
 
     public enum State
     {
@@ -46,6 +46,7 @@ public class moveeeee : MonoBehaviour, IDamageable
         agent = GetComponent<NavMeshAgent>();
         currentState = State.patrol;
         target = GameObject.FindGameObjectWithTag("Player").transform;
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -66,6 +67,7 @@ public class moveeeee : MonoBehaviour, IDamageable
                 agent.SetDestination(lastKnownPos);
             }
             agent.SetDestination(lastKnownPos);
+            animator.SetTrigger("Run");
 
         }
         else if (currentState != State.patrol)
@@ -81,6 +83,7 @@ public class moveeeee : MonoBehaviour, IDamageable
                 currentState = State.searching;
             }
             agent.stoppingDistance = attackrange / 3f;
+            animator.SetTrigger("Attack");
             agent.SetDestination(lastKnownPos);
             RangeAttack();
         }
