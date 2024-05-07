@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2409702920074429344}
   - component: {fileID: 290003624505397394}
   - component: {fileID: 670442211648849443}
+  - component: {fileID: -8253496339225659430}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -147,3 +148,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 20
+--- !u!114 &-8253496339225659430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5336418739190979690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1021cb5defdd90d43b6ea770399bd329, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

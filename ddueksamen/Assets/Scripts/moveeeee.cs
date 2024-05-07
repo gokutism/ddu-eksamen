@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class moveeeee : MonoBehaviour, IDamageable
+public class moveeeee : MonoBehaviour//, IDamageable
 {
     [Header("Navigation Settings")]
     NavMeshAgent agent;
@@ -34,15 +34,15 @@ public class moveeeee : MonoBehaviour, IDamageable
     private float lastshot = 0f;
     public float attackrange = 10f;
 
-    [Header("HP Settings")]
-    public float maxHP;
-    public float currentHp;
+    //[Header("HP Settings")]
+    //public float maxHealth;
+    //public float currentHealth;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        currentHp = maxHP;
+       // currentHealth = maxHealth;
         agent = GetComponent<NavMeshAgent>();
         currentState = State.patrol;
         target = GameObject.FindGameObjectWithTag("Player").transform;
@@ -160,17 +160,18 @@ public class moveeeee : MonoBehaviour, IDamageable
         return waypointIndex;
     }
 
-    public void TakeDamage(float damageAmount)
+    /*public void TakeDamage(float damageAmount)
     {
-        currentHp -= damageAmount;
-        if (currentHp < 0)
+        currentHealth -= damageAmount;
+        if (currentHealth <= 0)
         {
-            Debug.Log("ha loser");
+            
             Destroy(gameObject);
+            Debug.Log("ha loser");
         }
         Debug.Log("hit");
-    }
-
+    }*/
+   
     private void OnDrawGizmos()
     {
         Gizmos.DrawLine(transform.position, hit.point);

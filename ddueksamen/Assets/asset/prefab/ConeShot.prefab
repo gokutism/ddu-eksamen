@@ -15,9 +15,11 @@ GameObject:
   - component: {fileID: 5445439720065654963}
   - component: {fileID: 3462703870667938972}
   - component: {fileID: 2807408534682587685}
+  - component: {fileID: -6995995060860978763}
+  - component: {fileID: 373377769090482316}
   m_Layer: 0
   m_Name: ConeShot
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -612,3 +614,28 @@ MonoBehaviour:
   speed: 10
   ptkcolor1: {fileID: 3100332192673815182, guid: 896ee3f446f54ed4dab5ca8f9147ee50, type: 3}
   ptkcolor2: {fileID: 3685836756685519197, guid: 58cc747b053010c4597a8b693b851bbf, type: 3}
+--- !u!114 &-6995995060860978763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7539538496978875755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0c5ff9243d28f249abe2a6eabae36be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 50
+--- !u!114 &373377769090482316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7539538496978875755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1021cb5defdd90d43b6ea770399bd329, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

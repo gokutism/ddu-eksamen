@@ -20,6 +20,9 @@ public class ThirdPersonShooterController1 : MonoBehaviour
     [SerializeField] private Transform ptkcolor1;
     [SerializeField] private Transform ptkcolor2;
     [SerializeField] public int damage;
+    public Canvas canvas;
+    public Component ProjectileGun;
+    public Rigidbody rigidbody;
     RaycastHit raycastHit;
     private ThirdPersonController thirdPersonController;
     private StarterAssetsInputs starterAssetsInputs;
@@ -46,6 +49,9 @@ public class ThirdPersonShooterController1 : MonoBehaviour
         if (starterAssetsInputs.aim)
         {
             aimVirtualCamera.gameObject.SetActive(true);
+            canvas.GetComponent<Canvas>().enabled = true;
+           // rigidbody.gameObject.SetActive (true);
+            ProjectileGun.GetComponent<ProjectileGunTutorial>().enabled = true;
             thirdPersonController.SetSensitivity(aimSensitivity);
             thirdPersonController.SetRotateOnMove(false);
             Vector3 worldAimTarget = mouseWorldPosition;
@@ -57,14 +63,17 @@ public class ThirdPersonShooterController1 : MonoBehaviour
         else
         {
             aimVirtualCamera.gameObject.SetActive(false);
+            canvas.GetComponent<Canvas>().enabled = false;
+            //rigidbody.gameObject.SetActive(false);
+            ProjectileGun.GetComponent<ProjectileGunTutorial>().enabled= false;
             thirdPersonController.SetSensitivity(normalSensitivity);
             thirdPersonController.SetRotateOnMove(true);
         }
         if (starterAssetsInputs.shoot)
         {
 
-            RaycastHit hit;
-
+           RaycastHit hit;
+            /*
             if (Physics.Raycast(ray, out hit))
             {
                 if (hit.collider != null)
@@ -89,9 +98,9 @@ public class ThirdPersonShooterController1 : MonoBehaviour
 
                 }
             }
-            /* Vector3 aimDir = (mouseWorldPosition - spawnBulletPos.position).normalized;
-             Instantiate(bulletProjectileMan, spawnBulletPos.position, Quaternion.LookRotation(aimDir, Vector3.up));*/
-            
+             Vector3 aimDir = (mouseWorldPosition - spawnBulletPos.position).normalized;
+             Instantiate(bulletProjectileMan, spawnBulletPos.position, Quaternion.LookRotation(aimDir, Vector3.up));
+            */
             starterAssetsInputs.shoot = false;
         }
         
