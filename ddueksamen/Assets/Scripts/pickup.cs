@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class pickup : MonoBehaviour
 {
-    public GameObject player;
     inventory myinven;
 
     private void Start()
