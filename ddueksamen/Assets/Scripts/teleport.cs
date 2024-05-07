@@ -6,6 +6,7 @@ public class teleport : MonoBehaviour
 {
     private Collision _collider;
     public GameObject player;
+    public GameObject entrance;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +24,7 @@ public class teleport : MonoBehaviour
         {
             CharacterController cc = other.GetComponent<CharacterController>();
             cc.enabled = false;
-            other.transform.position = new Vector3(1,1,1);
+            other.transform.position = entrance.transform.position;
             cc.enabled = true;
         }
     }
