@@ -20,7 +20,7 @@ public class Bullet : MonoBehaviour
             if (healthComponent != null)
             {
                 //healthComponent.TakeDamage(1);
-                other.gameObject.GetComponent<IDamageable>()?.TakeDamage();
+                other.gameObject.GetComponent<IDamageable>()?.TakeDamage(damage);
             }
         }
     }
