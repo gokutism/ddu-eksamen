@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider other)
+    public float damage;
+    public void OnTriggerEnter(Collider other)
     {
         if (other.tag != "Projectile")
         {
             gameObject.transform.parent = other.gameObject.transform;
             Destroy(gameObject);
-            GetComponent<BoxCollider>().enabled = false;
+            //GetComponent<BoxCollider>().enabled = false;
 
         }
         if (other.tag == "Enemy")
@@ -18,7 +19,8 @@ public class Bullet : MonoBehaviour
             var healthComponent = other.GetComponent<EnemyFu>();
             if (healthComponent != null)
             {
-                healthComponent.TakeDamage(1);
+                //healthComponent.TakeDamage(1);
+                other.gameObject.GetComponent<IDamageable>()?.TakeDamage();
             }
         }
     }

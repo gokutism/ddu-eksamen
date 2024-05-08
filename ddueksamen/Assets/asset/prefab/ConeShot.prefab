@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3462703870667938972}
   - component: {fileID: 2807408534682587685}
   - component: {fileID: -6995995060860978763}
-  - component: {fileID: 373377769090482316}
+  - component: {fileID: -4018891264551933274}
   m_Layer: 0
   m_Name: ConeShot
   m_TagString: Projectile
@@ -626,8 +626,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0c5ff9243d28f249abe2a6eabae36be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 50
---- !u!114 &373377769090482316
+  damage: 5
+--- !u!114 &-4018891264551933274
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
