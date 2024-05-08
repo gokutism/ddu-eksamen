@@ -6,6 +6,7 @@ public class inventory : MonoBehaviour
 {
     public List<string> items;
     pickup pickup;
+    loot loot;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +23,7 @@ public class inventory : MonoBehaviour
     {
         
         items.Add(pickup.name);
+        items.Add(loot.name);
         
     }
 
