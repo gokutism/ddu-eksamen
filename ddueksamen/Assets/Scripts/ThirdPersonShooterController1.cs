@@ -73,7 +73,7 @@ public class ThirdPersonShooterController1 : MonoBehaviour
         {
 
            RaycastHit hit;
-            /*
+            
             if (Physics.Raycast(ray, out hit))
             {
                 if (hit.collider != null)
@@ -85,11 +85,11 @@ public class ThirdPersonShooterController1 : MonoBehaviour
                 if (hitTransform != null)
             {
 
-                if (hitTransform.GetComponent<BulletTarget>() != null)
+                if (hitTransform.CompareTag("Enemy"))
                 {
                     Instantiate(ptkcolor1, raycastHit.point, Quaternion.identity);
                    
-                    playerAtm.DealDamage(enemyAtm.gameObject);
+                    // playerAtm.DealDamage(enemyAtm.gameObject);
                     
                 }
                 else
@@ -97,7 +97,7 @@ public class ThirdPersonShooterController1 : MonoBehaviour
                     Instantiate(ptkcolor2, raycastHit.point, Quaternion.identity);
 
                 }
-            }
+            }/*
              Vector3 aimDir = (mouseWorldPosition - spawnBulletPos.position).normalized;
              Instantiate(bulletProjectileMan, spawnBulletPos.position, Quaternion.LookRotation(aimDir, Vector3.up));
             */
