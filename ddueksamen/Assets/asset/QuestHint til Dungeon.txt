@@ -1,6 +1,6 @@
 Quest/Hint til Dungeon
 NPC 1:I am never going back to that damn place, it almost got me killed. / Alternative: *What could be in there?* Oh hi there stranger, what can i help with?
 Player: Was just wondering what you where mumbling about.
-NPC 1: Oh uhh, nothing special. Well maybe there is something speciel about it, but i would not know if that was the case, for you see, a few days ago, i was out hunting when i came across an opening and found am entrance thing. But it was closed off and i could not find a way to get through it, no matter how much i looked around. but no reason to beat myself over that.
+NPC 1: Oh uhh, nothing special. Well maybe there is something special about it, but i would not know if that was the case, for you see, a few days ago, i was out hunting when i came across an opening and found am entrance thing. But it was closed off and i could not find a way to get through it, no matter how much i looked around. but no reason to beat myself over that.
 Player: Can you tell me where you found it?
 NPC: Wha, you wanna look for yourself? I am not sure how you would be able to get in, but i guess you can figure it out when i couldn't. Yeah, why not, just come back to me and tell what you found. That way, i can both know that you are alive and what was in there.
