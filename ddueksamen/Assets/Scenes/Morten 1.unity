@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1108,6 +1108,24 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &1424049458 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5431250651283075714, guid: c06fdb03fbdb3b649ba1f30ddb68db12, type: 3}
+  m_PrefabInstance: {fileID: 5303544831841511861}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1424049469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1424049458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 229414398e47d724a9b146190e8c10a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items: []
 --- !u!1 &1496185908
 GameObject:
   m_ObjectHideFlags: 0
@@ -1447,6 +1465,7 @@ GameObject:
   - component: {fileID: 1688419022}
   - component: {fileID: 1688419021}
   - component: {fileID: 1688419020}
+  - component: {fileID: 1688419026}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Enemy
@@ -1591,6 +1610,27 @@ Transform:
   - {fileID: 403871767}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1688419026
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1688419019}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1725888002
 GameObject:
   m_ObjectHideFlags: 0
@@ -2105,6 +2145,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4480971666950188813, guid: c06fdb03fbdb3b649ba1f30ddb68db12, type: 3}
+      propertyPath: SprintSpeed
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 4745187168452003262, guid: c06fdb03fbdb3b649ba1f30ddb68db12, type: 3}
       propertyPath: debugTransform
       value: 
@@ -2156,7 +2200,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5431250651283075714, guid: c06fdb03fbdb3b649ba1f30ddb68db12, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1424049469}
   m_SourcePrefab: {fileID: 100100000, guid: c06fdb03fbdb3b649ba1f30ddb68db12, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

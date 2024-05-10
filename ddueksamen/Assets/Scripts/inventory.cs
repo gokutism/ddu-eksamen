@@ -12,6 +12,7 @@ public class inventory : MonoBehaviour
     void Start()
     {
         pickup = FindObjectOfType<pickup>();
+        loot = FindObjectOfType<loot>();
     }
 
     // Update is called once per frame
