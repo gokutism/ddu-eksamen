@@ -6,6 +6,8 @@ using UnityEngine.AI;
 
 public class EnemyMove : MonoBehaviour
 {
+    [SerializeField] int currenthealth;
+    [SerializeField] int maxHealth;
     NavMeshAgent agent;
    // public Vector3 target;
     public Transform target;
