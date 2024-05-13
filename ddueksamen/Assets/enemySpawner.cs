@@ -7,6 +7,7 @@ public class enemySpawner : MonoBehaviour
     public GameObject theEnemy;
     public int xPos;
     public int zPos;
+    public int yPos;
     public int EnemyCount;
 
     private void Start()
@@ -16,11 +17,12 @@ public class enemySpawner : MonoBehaviour
 
     private IEnumerator SpawnEnemies()
     {
-        while (EnemyCount < 100)
+        while (EnemyCount < 50)
         {
-            xPos = Random.Range(-500, 500);
-            zPos = Random.Range(-500, 500);
-            Instantiate(theEnemy, new Vector3(xPos, -5, zPos), Quaternion.identity);
+            xPos = Random.Range(680, 880);
+            zPos = Random.Range(370, 700);
+            yPos = Random.Range(20, 60);
+            Instantiate(theEnemy, new Vector3(xPos, yPos, zPos), Quaternion.identity);
             yield return new WaitForSeconds(1);
             EnemyCount += 1;
         }
