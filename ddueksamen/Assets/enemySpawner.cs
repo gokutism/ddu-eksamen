@@ -8,6 +8,14 @@ public class enemySpawner : MonoBehaviour
     public int xPos;
     public int zPos;
     public int yPos;
+    public int minimumXPos;
+    public int minimumZPos;
+    public int minimumYPos;
+    public int maximumXPos;
+    public int maximumZPos;
+    public int maximumYPos;
+    public int maxEnemyCount;
+
     public int EnemyCount;
 
     private void Start()
@@ -17,11 +25,11 @@ public class enemySpawner : MonoBehaviour
 
     private IEnumerator SpawnEnemies()
     {
-        while (EnemyCount < 50)
+        while (EnemyCount < maxEnemyCount)
         {
-            xPos = Random.Range(680, 880);
-            zPos = Random.Range(370, 700);
-            yPos = Random.Range(20, 60);
+            xPos = Random.Range(minimumXPos, maximumXPos);
+            zPos = Random.Range(minimumZPos, maximumZPos);
+            yPos = Random.Range(minimumYPos, maximumYPos);
             Instantiate(theEnemy, new Vector3(xPos, yPos, zPos), Quaternion.identity);
             yield return new WaitForSeconds(1);
             EnemyCount += 1;
