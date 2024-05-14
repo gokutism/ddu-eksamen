@@ -5,16 +5,17 @@ using UnityEngine;
 public class enemySpawner : MonoBehaviour
 {
     public GameObject theEnemy;
-    public int xPos;
-    public int zPos;
-    public int yPos;
-    public int minimumXPos;
-    public int minimumZPos;
-    public int minimumYPos;
-    public int maximumXPos;
-    public int maximumZPos;
-    public int maximumYPos;
+    public float xPos;
+    public float zPos;
+    public float yPos;
+    public float minimumXPos;
+    public float minimumZPos;
+    public float minimumYPos;
+    public float maximumXPos;
+    public float maximumZPos;
+    public float maximumYPos;
     public int maxEnemyCount;
+    public float waitCount;
 
     public int EnemyCount;
 
@@ -31,7 +32,7 @@ public class enemySpawner : MonoBehaviour
             zPos = Random.Range(minimumZPos, maximumZPos);
             yPos = Random.Range(minimumYPos, maximumYPos);
             Instantiate(theEnemy, new Vector3(xPos, yPos, zPos), Quaternion.identity);
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(waitCount);
             EnemyCount += 1;
         }
     }
