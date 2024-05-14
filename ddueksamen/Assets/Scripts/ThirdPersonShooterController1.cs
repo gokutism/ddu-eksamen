@@ -22,7 +22,7 @@ public class ThirdPersonShooterController1 : MonoBehaviour
     [SerializeField] public int damage;
     public Canvas canvas;
     public Component ProjectileGun;
-    public Rigidbody rigidbody;
+    //public Rigidbody rigidbody;
     RaycastHit raycastHit;
     private ThirdPersonController thirdPersonController;
     private StarterAssetsInputs starterAssetsInputs;
@@ -50,8 +50,8 @@ public class ThirdPersonShooterController1 : MonoBehaviour
         {
             aimVirtualCamera.gameObject.SetActive(true);
             canvas.GetComponent<Canvas>().enabled = true;
-           // rigidbody.gameObject.SetActive (true);
-            ProjectileGun.GetComponent<ProjectileGunTutorial>().enabled = true;
+            //rigidbody.gameObject.SetActive (true);
+            //ProjectileGun.GetComponent<ProjectileGunTutorial>().enabled = true;
             thirdPersonController.SetSensitivity(aimSensitivity);
             thirdPersonController.SetRotateOnMove(false);
             Vector3 worldAimTarget = mouseWorldPosition;
@@ -65,7 +65,7 @@ public class ThirdPersonShooterController1 : MonoBehaviour
             aimVirtualCamera.gameObject.SetActive(false);
             canvas.GetComponent<Canvas>().enabled = false;
             //rigidbody.gameObject.SetActive(false);
-            ProjectileGun.GetComponent<ProjectileGunTutorial>().enabled= false;
+            //ProjectileGun.GetComponent<ProjectileGunTutorial>().enabled= false;
             thirdPersonController.SetSensitivity(normalSensitivity);
             thirdPersonController.SetRotateOnMove(true);
         }
