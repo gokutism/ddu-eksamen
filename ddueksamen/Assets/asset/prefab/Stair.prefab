@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: -1663262056624414737}
   - component: {fileID: -8129741995213615544}
   - component: {fileID: -9054213100495203746}
+  - component: {fileID: -1304316352127425101}
   m_Layer: 0
   m_Name: Stair
   m_TagString: Untagged
@@ -1223,3 +1224,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 3
+  playerHealth: {fileID: 4480971666950188813, guid: c06fdb03fbdb3b649ba1f30ddb68db12, type: 3}
+--- !u!65 &-1304316352127425101
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1147472952677354949}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.031555, y: 2.53629, z: 4.01772}
+  m_Center: {x: 0.93901306, y: 1.2287649, z: 1.9943626}

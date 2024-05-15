@@ -112,6 +112,8 @@ namespace StarterAssets
 
         private bool _hasAnimator;
 
+        public float maxHealth;
+        public float currentHealth;
         private bool IsCurrentDeviceMouse
         {
             get
@@ -400,6 +402,17 @@ namespace StarterAssets
         public void SetRotateOnMove(bool newRotateOnMove)
         {
             _rotateOnMove = newRotateOnMove;
+        }
+        public void TakeDamage(float damageAmount)
+        {
+            currentHealth -= damageAmount;
+            if (currentHealth <= 0)
+            {
+
+                Destroy(gameObject);
+                Debug.Log("ha loser");
+            }
+            Debug.Log("hit");
         }
     }
 }
