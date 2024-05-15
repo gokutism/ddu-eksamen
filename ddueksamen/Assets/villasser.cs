@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class villasser : MonoBehaviour
 {
@@ -30,7 +31,7 @@ public class villasser : MonoBehaviour
         }*/
         if (other.tag == ("Player") && Input.GetKey(KeyCode.E) && teleport.explored && inventory.items.Contains("Chest Parent 001"))
         {
-            dia1.SetActive(true);
+            SceneManager.LoadScene(1/*Put the number here*/);
         }
 
     }
