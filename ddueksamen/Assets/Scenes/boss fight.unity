@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2474,6 +2474,8 @@ MonoBehaviour:
   bulletspeed: 10
   bulletspawnpos: {fileID: 869595477}
   attackrange: 200
+  maxHealth: 0
+  currentHealth: 0
 --- !u!4 &195078189
 Transform:
   m_ObjectHideFlags: 0
@@ -3564,8 +3566,8 @@ MonoBehaviour:
   m_FrameSpace: 1
   m_AnchorPositionOverride: {fileID: 0}
   m_AnchorPositionOffset: {x: 0, y: 0, z: 0}
-  m_Yaw: 175.15887
-  m_Pitch: 41.304077
+  m_Yaw: 175.16945
+  m_Pitch: 41.281948
   m_Roll: 0
 --- !u!64 &324117849
 MeshCollider:
@@ -13545,7 +13547,7 @@ Transform:
   m_GameObject: {fileID: 514660867}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -386.87, y: 83.3, z: 523.3}
+  m_LocalPosition: {x: -386.87, y: 47.5, z: 523.3}
   m_LocalScale: {x: -16.544832, y: 31.448715, z: 22.656626}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16105,6 +16107,8 @@ MonoBehaviour:
   bulletspeed: 10
   bulletspawnpos: {fileID: 368775725}
   attackrange: 800
+  maxHealth: 0
+  currentHealth: 0
 --- !u!195 &784079867
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -16802,6 +16806,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5037541004552345325, guid: c06fdb03fbdb3b649ba1f30ddb68db12, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5431250651283075714, guid: c06fdb03fbdb3b649ba1f30ddb68db12, type: 3}
       propertyPath: m_Name
       value: Franz_ferdinand 3
@@ -21070,7 +21078,7 @@ Transform:
   m_GameObject: {fileID: 1391036184}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -386.87, y: 83.3, z: 491}
+  m_LocalPosition: {x: -386.87, y: 47.5, z: 491}
   m_LocalScale: {x: -16.544832, y: 31.448715, z: 22.656626}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -22366,7 +22374,7 @@ Transform:
   m_GameObject: {fileID: 1499676657}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -368, y: 83.3, z: 506.6}
+  m_LocalPosition: {x: -368, y: 47.5, z: 506.6}
   m_LocalScale: {x: -16.544832, y: 31.448715, z: 22.656626}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -22613,7 +22621,7 @@ Transform:
   m_GameObject: {fileID: 1506738358}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -401.3, y: 83.3, z: 506.6}
+  m_LocalPosition: {x: -401.3, y: 47.5, z: 506.6}
   m_LocalScale: {x: -16.544832, y: 31.448715, z: 22.656626}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -23382,7 +23390,7 @@ Transform:
   m_GameObject: {fileID: 1584476816}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -385, y: 71.4, z: 531.4}
+  m_LocalPosition: {x: -385, y: 35.6, z: 531.4}
   m_LocalScale: {x: 0.79281145, y: 92.928566, z: 49.97284}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -23524,7 +23532,7 @@ Transform:
   m_GameObject: {fileID: 1588741961}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -385, y: 71.5175, z: 482.3}
+  m_LocalPosition: {x: -385, y: 35.7175, z: 482.3}
   m_LocalScale: {x: 0.79281145, y: 92.928566, z: 49.97284}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -23606,6 +23614,8 @@ MonoBehaviour:
   bulletspeed: 15
   bulletspawnpos: {fileID: 806379081}
   attackrange: 120
+  maxHealth: 0
+  currentHealth: 0
 --- !u!195 &1592205668
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -24249,7 +24259,7 @@ Transform:
   m_GameObject: {fileID: 1633012452}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -409.6, y: 71.4, z: 506.8743}
+  m_LocalPosition: {x: -409.6, y: 35.6, z: 506.8743}
   m_LocalScale: {x: 0.79281145, y: 92.928566, z: 49.97284}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -26431,8 +26441,8 @@ MonoBehaviour:
   m_FrameSpace: 1
   m_AnchorPositionOverride: {fileID: 0}
   m_AnchorPositionOffset: {x: 0, y: 0, z: 0}
-  m_Yaw: -169.09998
-  m_Pitch: 31.500898
+  m_Yaw: -169.11261
+  m_Pitch: 31.47747
   m_Roll: 0.000010303126
 --- !u!64 &2080568491
 MeshCollider:
@@ -35810,7 +35820,7 @@ Transform:
   m_GameObject: {fileID: 2132427608}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -359.9, y: 71.5, z: 506.8743}
+  m_LocalPosition: {x: -359.9, y: 35.699997, z: 506.8743}
   m_LocalScale: {x: 0.79281145, y: 92.928566, z: 49.97284}
   m_ConstrainProportionsScale: 0
   m_Children: []
