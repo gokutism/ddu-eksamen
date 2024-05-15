@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class knuckles : MonoBehaviour
 {
-public bool maybe;
+    public bool maybe;
+    public GameObject dia;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,8 +21,9 @@ public bool maybe;
     {
         if (other.tag == ("Player") && Input.GetKeyDown("e"))
         {
-            Destroy(gameObject);
-            maybe = true;
+           dia.SetActive(true);
+           maybe = true;
+            
         }
         }
 }
