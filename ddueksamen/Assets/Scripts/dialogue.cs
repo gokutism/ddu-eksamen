@@ -9,11 +9,13 @@ public class dialogue : MonoBehaviour
     public TextMeshProUGUI textcomp;
     public string[] lines;
     public float textspeed;
+    CharacterController charactercontroller;
 
     private int index;
     // Start is called before the first frame update
     void Start()
     {
+        charactercontroller = GetComponent<CharacterController>();
         textcomp.text = string.Empty;
         Startdialog();
     }
@@ -55,7 +57,7 @@ public class dialogue : MonoBehaviour
             index++;
             textcomp.text = string.Empty;
             StartCoroutine(Typeline());
-           
+
         }
         else
         {

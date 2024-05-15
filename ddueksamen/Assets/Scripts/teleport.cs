@@ -5,9 +5,9 @@ using UnityEngine;
 public class teleport : MonoBehaviour
 {
     private Collision _collider;
-    public GameObject player;
     public GameObject entrance;
     knuckles knuckles;
+    public bool explored;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +27,7 @@ public class teleport : MonoBehaviour
             cc.enabled = false;
             other.transform.position = entrance.transform.position;
             cc.enabled = true;
+            explored = true;
         }
     }
 }
