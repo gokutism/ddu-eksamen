@@ -1225,6 +1225,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 3
   playerHealth: {fileID: 4480971666950188813, guid: c06fdb03fbdb3b649ba1f30ddb68db12, type: 3}
+  health: {fileID: 0}
 --- !u!65 &-1304316352127425101
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1240,7 +1241,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3

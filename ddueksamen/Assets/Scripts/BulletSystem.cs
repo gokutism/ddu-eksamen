@@ -8,6 +8,7 @@ public class BulletSystem : MonoBehaviour
 {
     [SerializeField] float damage = 20f;
     public ThirdPersonController playerHealth;
+    public health health;
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -17,8 +18,7 @@ public class BulletSystem : MonoBehaviour
             {
                 playerHealth = collision.gameObject.GetComponent<ThirdPersonController>();
             }
-            playerHealth.GetComponent<IDamageable>()?.TakeDamage(damage);
-            playerHealth.TakeDamage(damage);
+            collision.collider.GetComponent<IDamageable>()?.TakeDamage(damage);
         }
         
     }
