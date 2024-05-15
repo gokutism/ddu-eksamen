@@ -7,10 +7,11 @@ public class teleport : MonoBehaviour
     private Collision _collider;
     public GameObject player;
     public GameObject entrance;
+    knuckles knuckles;
     // Start is called before the first frame update
     void Start()
     {
-       
+       knuckles = FindObjectOfType<knuckles>();
     }
 
     // Update is called once per frame
@@ -20,7 +21,7 @@ public class teleport : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == ("Player"))
+        if (other.tag == ("Player") && knuckles.maybe)
         {
             CharacterController cc = other.GetComponent<CharacterController>();
             cc.enabled = false;
