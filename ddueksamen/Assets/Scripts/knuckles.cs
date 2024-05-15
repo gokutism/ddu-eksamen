@@ -26,10 +26,10 @@ public class knuckles : MonoBehaviour
            dia.SetActive(true);
            maybe = true;
         }
-        if (other.tag == ("Player") && Input.GetKey(KeyCode.E) && teleport.explored)
+       /* if (other.tag == ("Player") && Input.GetKey(KeyCode.E) && teleport.explored)
         { 
             dia1.SetActive(true);
-        }
+        }*/
 
     }
 }

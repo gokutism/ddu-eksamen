@@ -22,9 +22,9 @@ public class inventory : MonoBehaviour
     }
     public void Keep()
     {
-        
-        items.Add(pickup.name);
         items.Add(loot.name);
+        items.Add(pickup.name);
+        
         
     }
 

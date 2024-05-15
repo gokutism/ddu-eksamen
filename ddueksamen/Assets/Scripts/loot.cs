@@ -5,6 +5,7 @@ using UnityEngine;
 public class loot : MonoBehaviour
 {
     inventory myinven;
+   public bool d;
 
     private void Start()
     {
@@ -14,7 +15,7 @@ public class loot : MonoBehaviour
     {
         if (other.tag == ("Player"))
         {
-            
+            d = true;
             myinven.Keep();
         }
 

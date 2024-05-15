@@ -25,10 +25,10 @@ public class villasser : MonoBehaviour
     }
     private void OnTriggerStay(Collider other)
     {
-       /* if (other.tag == ("Player") && Input.GetKey(KeyCode.E) && teleport.explored)
+       if (other.tag == ("Player") && Input.GetKey(KeyCode.E) && teleport.explored)
         {
             dia.SetActive(true);
-        }*/
+        }
         if (other.tag == ("Player") && Input.GetKey(KeyCode.E) && teleport.explored && inventory.items.Contains("Chest Parent 001"))
         {
             SceneManager.LoadScene(1/*Put the number here*/);
